@@ -1,0 +1,24 @@
+{
+  "name": "photon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connors/photon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connors/photon/issues"
+  },
+  "homepage": "https://github.com/connors/photon#readme",
+  "devDependencies": {
+    "electron": "^1.6.11"
+  }
+}

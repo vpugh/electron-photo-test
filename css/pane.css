@@ -1,0 +1,10 @@
+.pane {
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+
+.pane-content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
