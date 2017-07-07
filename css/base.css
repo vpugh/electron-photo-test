@@ -1,9 +1,32 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
+    background-color: #5e42a6;
+    color: #fff;
 }
 
-.window {
-    margin: 0;
-    padding: 0;
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  height: 30px;
+  background-color: #312450;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11000;
+}
+
+.titlebar > h3 {
+      font-size: 12px;
+      position: absolute;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      top: 9px;
+  }
+
+#sidebar + #wrapper {
+    margin-left: 20em;
+    padding-top: 2.5em;
 }

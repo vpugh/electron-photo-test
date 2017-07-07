@@ -2,83 +2,38 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Unknown Test App</title>
+    <title>App Test Stage - Non-React</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/pane.css">
-    <link rel="stylesheet" href="https://maxcdn.boostrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css" rel="stylesheet">
-    <style>
-        main {
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-        }
-        .extra-margins {
-            margin-top: 1rem;
-            margin-bottom: 2.5rem;
-        }
-        .jumbotron {
-            text-align: center;
-        }
-    </style>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css">-->
   </head>
   <body>
-    <!--<div class="window">
-        <div class="window-content">
-            <div class="pane-group">
-                <div class="pane-sm sidebar"></div>
-                <div class="pane">
-                     <div class="pane-content">
-                        <h1>Manipulations of files</h1>
-                        We are using node <script>document.write(process.versions.node)</script>,
-                        Chrome <script>document.write(process.versions.chrome)</script>,
-                        and Electron <script>document.write(process.versions.electron)</script>.
-                        <div class="">
-                            <!--<input type="button" id="btn-createFile" value="Create new file">- ->
-                            <!--<input type="button" id="btn-readFile" value="Select a file to see its content">- ->
-                            <!--<input type="button" id="btn-updateFile" value="Update file content">- ->
-                            <input type="button" id="btn-deleteFile" value="Delete this file">
-                        </div>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-   <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="jumbotron">
-                        <h2 class="h2-responsive">Using HTML and CSS as UI with Electron Framework</h2>
-                        <br>
-                        <p>Our Code World</p>
-                        <hr>
-
-                        <!--Action Buttons-->
-                        <button class="btn btn-primary btn-stc" id="button-devtools">
-                            Open Chrome Dev Tools
-                        </button>
-                        <button class="btn btn-default btn-ptc" id="button-cmd">
-                            Open Microsoft Paint
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </main>
-   <script>window.$ = window.jQuery = require('https://code.jquery.com/jquery-2.2.4.min.js');</script>
-   <!--<script type="text/javascript" src="../javascript/tether.min.js"></script>-->
-   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
-   <script>
-    $("#button-devtools").click(() => {
-        var app = require('electron').remote;
-        app.BrowserWindow.getFocusedWindow().openDevTools();
-    });
-
-   </script>
+      <div class="titlebar">
+          <h3>New Title Bar</h3>
+      </div>
+      <section id="sidebar">
+          <ul>
+              <li>
+                  <a href="">Stuff</a>
+                  <a href="">Stuff</a>
+                  <a href="">Stuff</a>
+                  <a href="">Stuff</a>
+                  <a href="">Stuff</a>
+                  <a href="">Stuff</a>
+              </li>
+          </ul>
+      </section>
+      <main id="wrapper">
+          <h1>Following a Tutorial</h1>
+          <p>Just doing what this site is kinda telling me to do. https://www.christianengvall.se/electron-app-navigation/</p>
+      </main>
   </body>
+  <!-- If the require doesn't work, include first the jQuery file
+<script src="jquery-3.0.0.min.js"></script>-->
+<!--<script>window.$ = window.jQuery = require('./jquery-3.0.0.min.js');</script>-->
+    <script>window.$ = window.jQuery = require('js/jquery.min.js');</script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script>
     // filesystem module
     const fs = require('fs');
@@ -151,29 +106,29 @@
     // }, false);
 
     // Select and delete a file
-    document.getElementById("btn-deleteFile").addEventListener("click", () => {
+    // document.getElementById("btn-deleteFile").addEventListener("click", () => {
 
-        dialog.showOpenDialog((filenames) => {
-            if(filenames ===undefined){
-                console.log("No files were selected");
-                return;
-            }
+    //     dialog.showOpenDialog((filenames) => {
+    //         if(filenames ===undefined){
+    //             console.log("No files were selected");
+    //             return;
+    //         }
 
-            if(!fs.existsSync(filenames[0])){
-                alert("The file in " + filename + "doesn't exist");
-                return;
-            }
+    //         if(!fs.existsSync(filenames[0])){
+    //             alert("The file in " + filename + "doesn't exist");
+    //             return;
+    //         }
 
-            fs.unlink(filenames[0]), (err) => {
-                if(err){
-                    console.log("Cannot delet file", err);
-                    return;
-                }
+    //         fs.unlink(filenames[0]), (err) => {
+    //             if(err){
+    //                 console.log("Cannot delet file", err);
+    //                 return;
+    //             }
 
-                alert("File successfully deleted!");
-            }
-        });
-    }, false);
+    //             alert("File successfully deleted!");
+    //         }
+    //     });
+    // }, false);
 
   </script>
 </html>
