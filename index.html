@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css">-->
   </head>
   <body>
       <div class="titlebar">
@@ -29,106 +28,6 @@
           <p>Just doing what this site is kinda telling me to do. https://www.christianengvall.se/electron-app-navigation/</p>
       </main>
   </body>
-  <!-- If the require doesn't work, include first the jQuery file
-<script src="jquery-3.0.0.min.js"></script>-->
-<!--<script>window.$ = window.jQuery = require('./jquery-3.0.0.min.js');</script>-->
     <script>window.$ = window.jQuery = require('js/jquery.min.js');</script>
    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script>
-    // filesystem module
-    const fs = require('fs');
-    // Dialogs module
-    const {dialog} = require('electron').remote;
-
-    // Save a file with prefilled content
-    // document.getElementById("btn-createFile").addEventListener("click", () => {
-
-    //     let content = "Hello, this is the content of the new file";
-
-    //     dialog.showSaveDialog((filename) => {
-    //         if(filename === undefined){
-    //             console.log("The user clicked the button, but didn't create a file :)");
-    //             return;
-    //         }
-
-    //         fs.writeFile(filename, content, (err) => {
-    //             if(err){
-    //                 console.log("An error ocurred with the creation of the file" + err.message);
-    //                 return;
-    //             }
-
-    //             alert("File successfully created!");
-    //         })
-    //     });
-    // }, false);
-
-    // Select a file to read
-    // document.getElementById("btn-readFile").addEventListener("click", () => {
-
-    //     dialog.showOpenDialog((fileNames) => {
-    //     if(fileNames === undefined){
-    //         console.log("No files were selected");
-    //         return;
-    //     }
-
-    //     fs.readFile(fileNames[0], "utf-8", (err, data) => {
-    //         if(err){
-    //             console.log("Cannot read file ", err);
-    //             return;
-    //         }
-
-    //         console.log("The content of the file is : ");
-    //         console.log(data);
-    //         });
-    //     });
-    // }, false);
-
-    // Select a file to update its contents
-    // document.getElementById("btn-updateFile").addEventListener("click", () => {
-
-    //     let theNewContent = "This is the new content of an exisiting file 123123123";
-
-    //     dialog.showOpenDialog((fileNames) => {
-    //         if(fileNames === undefined){
-    //             console.log("No files selected");
-    //             return;
-    //         }
-
-    //         fs.writeFile(fileNames[0], theNewContent, (err) => {
-    //             if(err){
-    //                 console.log("Cannot update file", err);
-    //                 return;
-    //             }
-
-    //             alert("The file has been successfully updated");
-    //         });
-    //     })
-    // }, false);
-
-    // Select and delete a file
-    // document.getElementById("btn-deleteFile").addEventListener("click", () => {
-
-    //     dialog.showOpenDialog((filenames) => {
-    //         if(filenames ===undefined){
-    //             console.log("No files were selected");
-    //             return;
-    //         }
-
-    //         if(!fs.existsSync(filenames[0])){
-    //             alert("The file in " + filename + "doesn't exist");
-    //             return;
-    //         }
-
-    //         fs.unlink(filenames[0]), (err) => {
-    //             if(err){
-    //                 console.log("Cannot delet file", err);
-    //                 return;
-    //             }
-
-    //             alert("File successfully deleted!");
-    //         }
-    //     });
-    // }, false);
-
-  </script>
 </html>
