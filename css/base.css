@@ -4,13 +4,16 @@ body {
     position: relative;
     background-color: #5e42a6;
     color: #fff;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-weight: 400;
 }
 
 .titlebar {
   -webkit-user-select: none;
+  user-select: none;
   -webkit-app-region: drag;
   height: 30px;
-  background-color: #312450;
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,5 +31,15 @@ body {
 
 #sidebar + #wrapper {
     margin-left: 20em;
-    padding-top: 2.5em;
+    /*padding-top: 2.5em;*/
+}
+
+.top-pane {
+    background-color: #7c66b7;
+    height: 40px;
+    padding: 10px 20px;
+}
+
+.main-pane {
+    padding: 20px;
 }

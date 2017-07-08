@@ -6,28 +6,89 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+     <script src="./renderer/renderer.js"></script>
+    <script>
+        /*
+        We create an IIFE (immediately invoked function expression) that will be executed immediately the app loads.
+        This brings the need to load the script above because we are loading a function in that script. If we don't load it, the function below will throw a ' call to undefined function' error
+         */
+        (function () {
+            //the root folder will be our default path
+            readFolder('/', '/');
+        })();
+    </script>
   </head>
   <body>
-      <div class="titlebar">
-          <h3>New Title Bar</h3>
-      </div>
+      <div class="titlebar"></div>
       <section id="sidebar">
-          <ul>
+          <div id="backBtn"></div>
+          <hr>
+          <div class="shortcut" onclick="readFolder('/');"><i class="fa fa-anchor" aria-hidden="true"></i> Root</div>
+          <hr>
+          <div class="shortcut" onclick="readFolder('./');"><i class="fa fa-home" aria-hidden="true"></i> Home</div>
+          <hr>
+          <div id="listed-files"></div>
+          <!--<ul>
               <li>
-                  <a href="">Stuff</a>
-                  <a href="">Stuff</a>
-                  <a href="">Stuff</a>
-                  <a href="">Stuff</a>
-                  <a href="">Stuff</a>
-                  <a href="">Stuff</a>
+                  <a class="primary--folder" href="">Folder Stuff</a>
+                  <ul>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                  </ul>
+                  <a class="primary--folder" href="">Folder Stuff</a>
+                  <ul>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                  </ul>
+                  <a class="primary--folder" href="">Folder Stuff</a>
+                  <ul>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                  </ul>
+                  <a class="primary--folder" href="">Folder Stuff</a>
+                  <ul>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                  </ul>
+                  <a class="primary--folder" href="">Folder Stuff</a>
+                  <ul>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                  </ul>
+                  <a class="primary--folder" href="">Folder Stuff</a>
+                  <ul>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                      <li class="secondary--files"><a href="#">Documents</a></li>
+                  </ul>
               </li>
-          </ul>
+          </ul>-->
       </section>
       <main id="wrapper">
+          <section class="top-pane">
+              Content here (Search ala Spotify)
+          </section>
+          <section class="main-pane">
           <h1>Following a Tutorial</h1>
           <p>Just doing what this site is kinda telling me to do. https://www.christianengvall.se/electron-app-navigation/</p>
+          <div id="fileContents"></div>
+          </section>
       </main>
+      <script>
+          require('./renderer/renderer');
+    </script>
   </body>
-    <script>window.$ = window.jQuery = require('js/jquery.min.js');</script>
+    <script>window.$ = window.jQuery = require('./js/jquery.min.js');</script>
    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </html>
