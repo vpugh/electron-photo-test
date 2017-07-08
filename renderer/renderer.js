@@ -27,9 +27,9 @@ function readFolder(path, backBtn) {
     fs.readdir(path, (err, files) => {
         if (backBtn) {
         console.log('Ok');
-        let path = `$../${backBtn}`;
+        let path = `${backBtn}../`;
         console.log(path);
-        document.getElementById('backBtn').innerHTML = `<button class="btn btn-small btn-default" onclick="readFolder(this.id);" id="${backBtn}">Back</button><br>`;
+        document.getElementById('backBtn').innerHTML = `<button class="sidebar-btn" onclick="readFolder(this.id);" id="${path}">Back</button><br>`;
     }
         files = files.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
 
@@ -65,47 +65,51 @@ function openFile(path) {
 }
 
 // Open file in Electron App
-function openFileElectron(path) {
-    // fs.readFile(err, (path, data)){
-    //     if (err) throw err;
-
-    //     function OpenedFile(data) {
-
-    //     }
-
-    //     module.exports = OpenedFile;
-    // }
-    //// fs.stat(path + file, (err, stats) => {
-        fs.readFile(path, (err, data) => {
-            fs.stat(path, 'utf-8', (err, data, stats) => {
-                if (err) throw err;
-
-                if (stats.isFile(data)) {
-                    console.log("The file content is: " + data);
-                }
-            })
-        })
-    // fs.stat(path, 'utf-8', (err, data, stats) => {
-    //     if (err) {
-    //         alert("An error ocurred reading the file: " + err.message);
-    //         return;
-    //     }
-
-    //     if (stats.isFile()) {
-    //         console.log("The file content is:" + data);
-    //         // document.getElementById('fileContents').innerHTML += `<p>${data}</p>`
-    //         callback(null, data);
-    //     }
-    // })
-    // fs.readFile(path, 'utf-8', (err, data, stats) => {
-        
-    //     if (err) {
-    //         alert("An error ocurred reading the file: " + err.message);
-    //         return;
-    //     }
-    //     if (stats.isFile()) {
-    //         console.log("The file content is:" + data);
-    //     // document.getElementById('fileContents').innerHTML += `<p>${data}</p>`
-    //     }
-    // })
+function openFileElectron(path, file) {
+    console.log(path);
+    console.log(file);
 }
+// function openFileElectron(path) {
+//     // fs.readFile(err, (path, data)){
+//     //     if (err) throw err;
+
+//     //     function OpenedFile(data) {
+
+//     //     }
+
+//     //     module.exports = OpenedFile;
+//     // }
+//     //// fs.stat(path + file, (err, stats) => {
+//         fs.readFile(path, (err, data) => {
+//             fs.stat(path, 'utf-8', (err, data, stats) => {
+//                 if (err) throw err;
+
+//                 if (stats.isFile(data)) {
+//                     console.log("The file content is: " + data);
+//                 }
+//             })
+//         }, false);
+//     // fs.stat(path, 'utf-8', (err, data, stats) => {
+//     //     if (err) {
+//     //         alert("An error ocurred reading the file: " + err.message);
+//     //         return;
+//     //     }
+
+//     //     if (stats.isFile()) {
+//     //         console.log("The file content is:" + data);
+//     //         // document.getElementById('fileContents').innerHTML += `<p>${data}</p>`
+//     //         callback(null, data);
+//     //     }
+//     // })
+//     // fs.readFile(path, 'utf-8', (err, data, stats) => {
+        
+//     //     if (err) {
+//     //         alert("An error ocurred reading the file: " + err.message);
+//     //         return;
+//     //     }
+//     //     if (stats.isFile()) {
+//     //         console.log("The file content is:" + data);
+//     //     // document.getElementById('fileContents').innerHTML += `<p>${data}</p>`
+//     //     }
+//     // })
+// }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-     <script src="./renderer/renderer.js"></script>
+    <script src="./renderer/renderer.js"></script>
     <script>
         /*
         We create an IIFE (immediately invoked function expression) that will be executed immediately the app loads.
@@ -16,13 +16,14 @@
          */
         (function () {
             //the root folder will be our default path
-            readFolder('/', '/');
+            readFolder('/', './');
         })();
     </script>
   </head>
   <body>
       <div class="titlebar"></div>
       <section id="sidebar">
+          <div class="stopper"></div>
           <div id="backBtn"></div>
           <hr>
           <div class="shortcut" onclick="readFolder('/');"><i class="fa fa-anchor" aria-hidden="true"></i> Root</div>
@@ -30,50 +31,6 @@
           <div class="shortcut" onclick="readFolder('./');"><i class="fa fa-home" aria-hidden="true"></i> Home</div>
           <hr>
           <div id="listed-files"></div>
-          <!--<ul>
-              <li>
-                  <a class="primary--folder" href="">Folder Stuff</a>
-                  <ul>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                  </ul>
-                  <a class="primary--folder" href="">Folder Stuff</a>
-                  <ul>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                  </ul>
-                  <a class="primary--folder" href="">Folder Stuff</a>
-                  <ul>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                  </ul>
-                  <a class="primary--folder" href="">Folder Stuff</a>
-                  <ul>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                  </ul>
-                  <a class="primary--folder" href="">Folder Stuff</a>
-                  <ul>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                  </ul>
-                  <a class="primary--folder" href="">Folder Stuff</a>
-                  <ul>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                      <li class="secondary--files"><a href="#">Documents</a></li>
-                  </ul>
-              </li>
-          </ul>-->
       </section>
       <main id="wrapper">
           <section class="top-pane">
